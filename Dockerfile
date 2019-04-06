@@ -19,6 +19,6 @@ COPY shell /shell
 
 # 健康检查 --interval检查的间隔 超时timeout retries失败次数
 HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
-    CMD netstat -an | grep :9000 || exit 1
+    CMD ps -a | grep php || exit 1
 # 启动
 CMD ["/shell/start.sh"]
