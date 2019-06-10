@@ -2,7 +2,7 @@ FROM registry.cn-beijing.aliyuncs.com/dxq_docker/nginx
 LABEL author=ahmerry@qq.com
 
 # PHP 镜像
-RUN apk add --no-cache php7-fpm php7-common php7-pdo php7-pdo_mysql php7-curl php7-redis php7-gd php7-openssl php7-json php7-pear php7-phar php7-zip php7-zlib php7-iconv php7-posix php7-pcntl && \
+RUN apk add --no-cache php7-fpm php7-common php7-pdo php7-pdo_mysql php7-curl php7-redis php7-gd php7-openssl php7-json php7-pear php7-phar php7-zip php7-zlib php7-iconv php7-posix php7-pcntl php7-mysqli php7-simplexml php7-dom php7-mbstring php7-xmlwriter php7-tokenizer && \
 # composer 中国镜像
     php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.php');" && \
     php composer-setup.php && \
